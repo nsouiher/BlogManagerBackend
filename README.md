@@ -5,6 +5,10 @@
     SpringBoot version : 2.3.2
     maven : 3.6
 
+#### Before running
+    If u have a password for the roort user of your mysql database ,
+    please put it in the application.properties file
+
 #### Using Eclipse
     Import the maven projet to eclipse
     Right click on project: Maven install
