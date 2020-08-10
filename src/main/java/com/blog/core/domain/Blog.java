@@ -12,8 +12,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="BLOG")
-public class Blog implements Serializable{
+@Table(name = "BLOG")
+public class Blog implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -24,15 +24,16 @@ public class Blog implements Serializable{
 	private String owner;
 	private LocalDateTime createdAt;
 	private LocalDateTime updateddAt;
-	@OneToMany(mappedBy="blog")
-	
+	@OneToMany(mappedBy = "blog")
+
 	private List<Comment> comments;
+
 	public int getIdBlog() {
 		return id;
 	}
-	
-	
-	public Blog(String content, LocalDateTime createdAt, LocalDateTime updateddAt,String title,String owner, List<Comment> comments) {
+
+	public Blog(String content, LocalDateTime createdAt, LocalDateTime updateddAt, String title, String owner,
+			List<Comment> comments) {
 		super();
 		this.content = content;
 		this.title = title;
@@ -42,51 +43,60 @@ public class Blog implements Serializable{
 		this.comments = comments;
 	}
 
-	
-
 	public Blog() {
-		super();		
+		super();
 	}
 
 	public void setIdBlog(int idBlog) {
 		this.id = idBlog;
 	}
+
 	public String getContent() {
 		return content;
 	}
+
 	public void setContent(String content) {
 		this.content = content;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getOwner() {
 		return owner;
 	}
+
 	public void setOwner(String owner) {
 		this.owner = owner;
 	}
+
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
+
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
+
 	public LocalDateTime getUpdateddAt() {
 		return updateddAt;
 	}
+
 	public void setUpdateddAt(LocalDateTime updateddAt) {
 		this.updateddAt = updateddAt;
 	}
+
 	public List<Comment> getComments() {
 		return comments;
 	}
+
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-	 
-	 
+
 }
